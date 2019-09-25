@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './Contact.css';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
 class Main extends Component {
 
 state = {
@@ -33,9 +39,20 @@ vrednostSelect = event => {
        selektovanje: event.target.value
     });
   };
-  slanje = (e) => {
+  /*slanje = (e) => {
       e.preventDefault();
       console.log(this.state);
+  };*/
+  slanje = e => {
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      e.preventDefault()
   };
 
     render(){
@@ -74,7 +91,7 @@ vrednostSelect = event => {
               <h1>Contact Us.</h1>
              <p><em>We expect your message</em></p>
 
-             <form onSubmit={this.slanje} method="POST" data-netlify="true">
+             <form onSubmit={this.slanje}>
                  <label>Ime i prezime</label>
                  <input value={this.state.name} onChange={this.vrednostInputa}
                  name="name" type="text"></input>
@@ -97,8 +114,6 @@ vrednostSelect = event => {
                      <option>Izbor 2</option>
                      <option>Izbor 3</option>
                  </select>
-
-                 <div data-netlify-recaptcha="true"></div>
 
                  <button type="submit" id="dugmekontakt">Posalji</button>
              </form>
