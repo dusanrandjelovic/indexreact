@@ -1,0 +1,10 @@
+#ispis {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 7%;
+    flex-wrap: wrap;
+}
+#jedanispis {
+    margin: 2% 3%;
+}

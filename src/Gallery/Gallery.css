@@ -1,0 +1,185 @@
+#maingallery {
+    display: flex;
+    height: 100vh;
+}
+.mainaboutslajder {
+    background-image: linear-gradient(rgba(55, 58, 55, 0.5), rgba(64, 90, 117, 0.3)), url("../Slike/poz.jpg");
+    background-size: cover;
+    width: 50%;
+    background-position: center;
+    background-attachment: fixed;
+}
+.pozadinagal {
+   /* background-image: url("fog.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 150vh;*/
+    padding: 3% 0;
+    text-align: center;
+}
+.kolonagal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 3% 10%;
+}
+.kolonagal img {
+    max-width: 100%;
+    height: 30vh;
+    border: 1px solid white;
+    border-radius: 0 0 15px 0;
+    margin-top: 20px;
+}
+
+/* gal2 */
+
+.redfrizure {
+    display: flex;
+    justify-content: center;
+}
+.redfrizure img {
+    max-width: 100%;
+    height: 30vh;
+}
+
+
+.container {
+	margin: 10vh auto;
+	max-width: 80%;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-auto-rows: 250px;
+	grid-auto-flow: dense;
+}
+
+.gal {
+	text-align: center;
+	padding: 1rem 0;
+	color: white;
+	font-size: 3rem;
+	text-transform: uppercase;
+	background: rgba(0,0,0,.2);
+	overflow: hidden;
+	padding: 0;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+.gal img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+	transition: all .5s;
+}
+
+.gal.show::before {
+	content: '';
+	display: block;
+	position: fixed;
+	z-index: 555;
+	width: 100vw;
+	height: 100vh;
+	top: 0; left: 0;
+	background: rgba(0,0,0,.6);
+}
+
+.gal.show img {
+	position: fixed;
+	top: 0; left: 0;
+	margin: 30px;
+	align-self: center;
+	object-fit: contain;
+	z-index: 666;
+	width: calc(100% - 60px);
+	height: calc(100% - 60px);
+	filter: drop-shadow(0 3px 15px black);
+	/*cursor: url(close-button.png), grab; *//* custom cursor to signal close on click */
+}
+
+.gal:not(.show):hover img {
+	cursor: pointer;
+	transform: scale(1.3);
+}
+
+
+.horizontal {
+	grid-column: span 2;
+}
+
+.vertical {
+	grid-row: span 2;
+}
+
+.big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.active .gal:not(.show) img {
+	filter: blur(3px);
+}
+
+/* gal3 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .row > .column {
+    padding: 0 0.6%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    width: 23%;
+  }
+  
+  
+
+  img {
+    margin-bottom: -4px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  @media (max-width: 768px){
+    #maingallery {
+      flex-direction: column;
+    }
+    .mainaboutslajder {
+      width: 100%;
+      height: 400px;
+    }
+  }

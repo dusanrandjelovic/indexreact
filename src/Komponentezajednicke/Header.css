@@ -1,0 +1,114 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1% 7%;
+    font-size: 1em;
+    background: linear-gradient(rgb(55, 58, 55), rgb(64, 90, 117));
+  }
+  .navlevo {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+    border: none;
+  }
+  #portfoliodugme {
+    border: 1px solid inherit;
+    padding: 7px 11px;
+    background-color: red;
+    transition: 0.8s;
+  }
+  #portfoliodugme:hover{
+    box-shadow: 2px 2px brown;
+    transition: 0.8s;
+  }
+  a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: white;
+  }
+  a:hover {
+    color: black;
+  }
+  #dugme {
+      border: 1px solid white;
+      padding: 10px 14px;
+      background-color: whitesmoke;
+      border-radius: 8px;
+      color: black;
+      transition: 0.6s;
+  }
+  #dugme:hover {
+    color: white;
+    border: 1px solid gray;
+    background-color: black;
+    transition: 0.6s;
+  }
+
+  .icon {
+    display: none;
+  }
+.active {
+  color: black;
+  text-transform: uppercase;
+}
+.active#dugme {
+  color: white;
+  border: 1px solid gray;
+  background-color: black;
+}
+
+  @media (max-width:768px){
+    nav {
+      flex-direction: column;
+      padding-bottom: 1.5%;
+    }
+    #dugme {
+      padding: 4px 6px;
+    }
+  }
+  @media (max-width: 550px){
+    nav {
+      padding: 0.1% 0%;
+    }
+    .logo {
+      width: 45px;
+      height: 45px;
+    }
+    a {
+      margin-left: 0;
+    }
+    .topnav {
+      display: block;
+      width: 100%;
+    }
+    .topnav .a {display: none;}
+    .icon {
+      display: block;
+      border: 1px solid white;
+      text-align: center;
+      width: 70px;
+      margin: 0 auto;
+      font-size: 1.3em;
+    }
+    .icon:hover {
+      border: 1px solid black;
+    }
+    .topnav.responsive {
+      position: relative;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: center;
+    }
+    .topnav.responsive a {
+      display: block;
+     text-align: left;
+     margin: 2px 5px 15px;
+    }
+  }

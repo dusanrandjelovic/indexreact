@@ -1,0 +1,193 @@
+#mainhome {
+    background: linear-gradient(rgba(55, 58, 55, 0.5), rgba(64, 90, 117, 0.3)), url("../Slike/poz.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 90vh;
+    padding: 1% 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.homered {
+  display: flex;
+  margin: 8% 4%;
+}
+.homered a {
+  border: 0.5px solid black;
+  transition: 0.2s;
+}
+.homered a:hover {
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 0.3px solid black;
+  transition: 0.2s;
+}
+
+.hoverefekat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2% 3%;
+}
+figure.snip0015 {
+    /*font-family: 'Raleway', Arial, sans-serif;*/
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 310px;
+    max-height: 220px;
+    width: 100%;
+    background: #000000;
+    text-align: center;
+  }
+  figure.snip0015 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  figure.snip0015 img {
+    opacity: 1;
+    width: 100%;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+  }
+  figure.snip0015 figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3em 3em;
+    width: 100%;
+    height: 100%;
+  }
+  figure.snip0015 figcaption::before {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    bottom: 50%;
+    left: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    content: '';
+    opacity: 0;
+    background-color: #ffffff;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+  }
+  figure.snip0015 h2,
+  figure.snip0015 p {
+    margin: 0 0 5px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+  }
+  figure.snip0015 h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0%, 50%, 0);
+    transform: translate3d(0%, 50%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  figure.snip0015 h2 span {
+    font-weight: 800;
+  }
+  figure.snip0015 p {
+    font-weight: 200	;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  figure.snip0015 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff;
+  }
+  figure.snip0015:hover img {
+    opacity: 0.35;
+  }
+  figure.snip0015:hover figcaption h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  figure.snip0015:hover figcaption p {
+    opacity: 0.9;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+  }
+  figure.snip0015:hover figcaption::before {
+    background: rgba(255, 255, 255, 0);
+    top: 30px;
+    bottom: 30px;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+
+  .redtrihome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 7%;
+  }
+  .redtrihome div {
+    padding: 0 1%;
+  }
+  .redtrihome img {
+    border-radius: 10px;
+  }
+
+  .redcetirihome {
+    background: linear-gradient(rgba(55, 58, 55, 0.6), rgba(64, 90, 117, 0.6)), url("../Slike/poz.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+    padding: 2% 0;
+    margin: 2% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .kakontakt {
+    color: black;
+    background-color: whitesmoke;
+    opacity: 0.9;
+    padding: 8px 12px;
+    border: 1px solid black;
+    margin-left: 15px;
+    transition: 0.5s;
+  }
+  .kakontakt:hover {
+    background-color: black;
+    color: whitesmoke;
+    transition: 0.5s;
+  }
+
+  @media (max-width: 900px){
+    .homered{
+      flex-direction: column;
+      justify-content: space-around;
+      height: 200px;
+    }
+    .hoverefekat {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 786px){
+    .redtrihome {
+      flex-direction: column;
+    }
+  }

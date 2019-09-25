@@ -1,0 +1,26 @@
+.futer {
+    background: linear-gradient(rgb(55, 58, 55), rgb(64, 90, 117));
+    padding: 2% 7%;
+    text-align: center;
+}
+.futerprvideo {
+    display: flex;
+    justify-content: space-between;
+}
+.futerprvideo div {
+    width: 33%;
+}
+
+.futerprvideo div a {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 1000px){
+.futerprvideo {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.futerprvideo div {
+    width: auto;
+}
+}
