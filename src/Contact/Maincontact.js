@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import ContactForm from './Contactform.html';
-
-const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
 
 class Main extends Component {
 
@@ -40,20 +33,9 @@ vrednostSelect = event => {
        selektovanje: event.target.value
     });
   };
-  /*slanje = (e) => {
+  slanje = (e) => {
       e.preventDefault();
       console.log(this.state);
-  };*/
-  slanje = e => {
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
-
-      e.preventDefault()
   };
 
     render(){
@@ -120,7 +102,6 @@ vrednostSelect = event => {
              </form>
             </div>
 
-            <ContactForm />
 
             </div>
         )
