@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Contact.css';
+import ContactForm from './Contactform.html';
 
 const encode = (data) => {
     return Object.keys(data)
@@ -9,15 +10,42 @@ const encode = (data) => {
 
 class Main extends Component {
 
- constructor(props) {
-      super(props);
-      this.state = { name: "", email: "", message: "" };
-    }
-
-    /* Here’s the juicy bit for posting the form submission */
-
-    handleSubmit = e => {
-      fetch("/", {
+state = {
+    name: "",
+    email: "",
+    tekst: "",
+    cekiranje: true,
+    selektovanje: "Izbor 1"
+}
+vrednostInputa = event => {
+   this.setState ({ name: event.target.value });
+};
+vrednostEmail = event => {
+  this.setState ({
+     email: event.target.value
+  });
+};
+vrednostTekst = event => {
+    this.setState ({
+       tekst: event.target.value
+    });
+  };
+vrednostCheck = event => {
+    this.setState ({
+       cekiranje: event.target.checked
+    });
+};
+vrednostSelect = event => {
+    this.setState ({
+       selektovanje: event.target.value
+    });
+  };
+  /*slanje = (e) => {
+      e.preventDefault();
+      console.log(this.state);
+  };*/
+  slanje = e => {
+    fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...this.state })
@@ -25,13 +53,11 @@ class Main extends Component {
         .then(() => alert("Success!"))
         .catch(error => alert(error));
 
-      e.preventDefault();
-    };
-
-    handleChange = e => this.setState({ [e.target.name]: e.target.value });
+      e.preventDefault()
+  };
 
     render(){
-       const { name, email, message } = this.state;
+        console.log(this.state.name);
         return (
             <div>
             <div id="maincontact">
@@ -66,27 +92,35 @@ class Main extends Component {
               <h1>Contact Us.</h1>
              <p><em>We expect your message</em></p>
 
-           <form onSubmit={this.handleSubmit}>
-          <p>
-            <label>
-              Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message: <textarea name="message" value={message} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+             <form onSubmit={this.slanje}>
+                 <label>Ime i prezime</label>
+                 <input value={this.state.name} onChange={this.vrednostInputa}
+                 name="name" type="text"></input>
+
+                 <label>Email</label>
+                 <input value={this.state.email} onChange={this.vrednostEmail}
+                 name="email" type="email"></input>
+
+                 <label>Komentar</label>
+                 <textarea value={this.state.tekst} onChange={this.vrednostTekst}
+                 name="tekst"></textarea>  
+
+                 <span> <input type="checkbox" 
+                 checked={this.state.cekiranje} 
+                 onChange={this.vrednostCheck} name="cekiranje"/> Dobar sajt?</span> 
+
+                 <label>Izaberi zeljeni sajt</label>
+                 <select value={this.state.selektovanje} onChange={this.vrednostSelect} name="selektovanje">
+                     <option>Izbor 1</option>
+                     <option>Izbor 2</option>
+                     <option>Izbor 3</option>
+                 </select>
+
+                 <button type="submit" id="dugmekontakt">Posalji</button>
+             </form>
             </div>
+
+            <ContactForm />
 
             </div>
         )
