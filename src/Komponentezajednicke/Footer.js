@@ -16,13 +16,13 @@ class Footer extends Component {
                    <p>CRUD apps, Node, Express. </p>
                 </div>
                 <div>
-                   <p><a href="https://informalnoucenje.000webhostapp.com" target="_blank"
-                   rel="noopener noreferrer" >Superdesign</a></p>
+                   <p><a href="https://authlara.000webhostapp.com" target="_blank"
+                   rel="noopener noreferrer" >Laravel</a></p>
                    <p><a href="https://informalnoucenje.000webhostapp.com" target="_blank" 
                    rel="noopener noreferrer">WordPress Shop</a></p>
                    <p><a href="https://informalnoucenje.000webhostapp.com" target="_blank"
                    rel="noopener noreferrer">Login system</a></p>
-                   <p><a href="https://informalnoucenje.000webhostapp.com" target="_blank"
+                   <p><a href="https://heuristic-ride-ab60ef.netlify.com/" target="_blank"
                    rel="noopener noreferrer">React II</a></p>
                 </div>
                 <div>
