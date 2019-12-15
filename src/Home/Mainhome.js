@@ -50,7 +50,7 @@ class Main extends Component {
               target="_blank" rel="noopener noreferrer" >Car Wash</a>
               <a style={stilovi} href="https://berbernica.000webhostapp.com" 
               target="_blank" rel="noopener noreferrer" >Barbers</a>
-              <a style={stilovi} href="https://dusanrandjelovic.000webhostapp.com" 
+              <a style={stilovi} href="https://dusanrandjelovicportfolio.000webhostapp.com" 
               target="_blank" rel="noopener noreferrer">Portfolio</a>
               </div>
               </main>
