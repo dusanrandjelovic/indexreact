@@ -28,18 +28,18 @@ class Main extends Component {
 
              <div className="kolona">
                <Kartica 
-               naslov="Dusan" 
+               naslov="Frontend" 
                text="Modern and responsive website development with SEO optimization and SassCSS."
                imgLink={poz}
                />
                <Kartica 
-                 naslov="React" 
-                 text="UI design with React, API and single page apps implementation. Basic Node and Express."
+                 naslov="WordPress" 
+                 text="WP websites with numerous plugins such as for security, multilanguage, shop."
                  imgLink={poz}
                />
                <Kartica 
-                 naslov="PHP and SQL" 
-                 text="CRUD apps, contact forms, search filters, login/signup systems. Very basic Laravel."
+                 naslov="Laravel and SQL" 
+                 text="CRUD apps, contact forms, admin panel, shop and checkout, login/signup systems."
                  imgLink={poz}
                />
 
