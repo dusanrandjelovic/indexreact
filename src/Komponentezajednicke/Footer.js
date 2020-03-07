@@ -10,20 +10,20 @@ class Footer extends Component {
 
                 <div className="futerprvideo">
                 <div>
-                   <p>Signup/login, API, PHP contact forms, SQL queries. </p>
+                   <p>Signup/login, API, contact forms, admin panel. </p>
                    <p>React, SassCSS, WordPress online shoppes. </p>
-                   <p>Responsive, validate and modern websites on first google page. </p>
-                   <p>CRUD apps, Node, Express. </p>
+                   <p>Responsive and modern websites on first google page. </p>
+                   <p>CRUD apps, database. Laravel shop. </p>
                 </div>
                 <div>
-                   <p><a href="https://authlara.000webhostapp.com" target="_blank"
-                   rel="noopener noreferrer" >Laravel</a></p>
-                   <p><a href="https://informalnoucenje.000webhostapp.com" target="_blank" 
+                   <p><a href="https://jedantackasedam.000webhostapp.com" target="_blank"
+                   rel="noopener noreferrer" >Laravel Shop</a></p>
+                   <p><a href="https://dusanshop.000webhostapp.com" target="_blank" 
                    rel="noopener noreferrer">WordPress Shop</a></p>
-                   <p><a href="https://informalnoucenje.000webhostapp.com" target="_blank"
+                   <p><a href="https://13decverzija.000webhostapp.com" target="_blank"
                    rel="noopener noreferrer">Login system</a></p>
-                   <p><a href="https://heuristic-ride-ab60ef.netlify.com/" target="_blank"
-                   rel="noopener noreferrer">React II</a></p>
+                   <p><a href="https://berbernica.000webhostapp.com" target="_blank"
+                   rel="noopener noreferrer">Frontend</a></p>
                 </div>
                 <div>
                 <img src={logo} alt="hotel logo" className="logo"/>

@@ -12,7 +12,7 @@ class Header extends Component {
                <nav>
 <div className="navlevo">
 <NavLink to='/'><img src={logo} alt="hotel logo" className="logo"/></NavLink>
-<a href="https://dusanrandjelovic.000webhostapp.com" 
+<a href="https://dusanrandjelovicportfolio.000webhostapp.com" 
               target="_blank" rel="noopener noreferrer" id="portfoliodugme">Portfolio</a>
 </div>
 <div class="topnav" id="myTopnav">
