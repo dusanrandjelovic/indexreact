@@ -24,13 +24,13 @@ class Main extends Component {
         opacity: '0.9'
       }
       
-      if (hours < 11){
-        pozdrav = "Every morning brings ... begining";
-        stilovi.color = "whitesmoke";
+      if (hours < 12){
+        pozdrav = "Every morning brings ... beginning";
+        stilovi.color = "#130b24";
       }
-      else if (hours < 18){
+      else if (hours < 17){
         pozdrav = "Every day brings ... light";
-        stilovi.color = "red";
+        stilovi.color = "#07010e";
       }
       else {
         pozdrav = "Every evening brings ... dark";
@@ -46,10 +46,10 @@ class Main extends Component {
               <p style={stilovi}>{pozdrav}</p>
 
               <div className="homered">
-              <a style={stilovi} href="https://carwash1.000webhostapp.com" 
+              <a style={stilovi} href="https://carwash3.000webhostapp.com" 
               target="_blank" rel="noopener noreferrer" >Car Wash</a>
-              <a style={stilovi} href="https://berbernica.000webhostapp.com" 
-              target="_blank" rel="noopener noreferrer" >Barbers</a>
+              <a style={stilovi} href="https://jedantackasedam.000webhostapp.com" 
+              target="_blank" rel="noopener noreferrer" >Shop</a>
               <a style={stilovi} href="https://dusanrandjelovicportfolio.000webhostapp.com" 
               target="_blank" rel="noopener noreferrer">Portfolio</a>
               </div>
@@ -61,11 +61,11 @@ class Main extends Component {
               <div>
               <p>This website presents user interface made by React.js.
               It has routing, an API functionality, contact form, gallery, map, font-awesome, 
-              x-o game from official React website. 
+              tic-tac-toe game from official React website. 
               Website is hosted by netlify. 
               </p>
               <p>If you look my other work you can see that I can make almost any website. I can use <strong>SassCss</strong>, 
-              <strong> PHP</strong>, <strong>SQL</strong>.</p>
+              <strong> Laravel</strong>, <strong>SQL</strong>.</p>
               </div>
               <div>
               <img src={zenasesir} alt="sample38"></img>
